@@ -1,0 +1,14 @@
+apiVersion: openfaas.com/v1alpha2
+kind: FunctionIngress
+metadata:
+  name: hugo-blog
+  namespace: openfaas
+spec:
+  domain: "test.matiaspan.me"
+  function: "hugo-blog"
+  ingressType: "nginx"
+  tls:
+    enabled: true
+    issuerRef:
+      name: "letsencrypt-prod"
+      kind: "ClusterIssuer"

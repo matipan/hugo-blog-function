@@ -1,0 +1,12 @@
+version: 1.0
+provider:
+  name: openfaas
+  gateway: https://gateway.o6s.matiaspan.me
+functions:
+  hugo-blog:
+    lang: hugo
+    handler: ./hugo-blog
+    image: matipan/hugo-blog:latest
+    annotations:
+      com.openfaas.health.http.path: "/"
+      com.openfaas.health.http.initialDelay: "30s"
