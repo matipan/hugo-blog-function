@@ -7,6 +7,8 @@ functions:
     lang: hugo
     handler: ./hugo-blog
     image: matipan/hugo-blog:latest
+    labels:
+      com.openfaas.scale.zero: "false"
     annotations:
       com.openfaas.health.http.path: "/"
       com.openfaas.health.http.initialDelay: "30s"
