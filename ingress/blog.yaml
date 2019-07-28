@@ -5,7 +5,7 @@ metadata:
   namespace: openfaas
 spec:
   domain: "test.matiaspan.me"
-  function: "hugo-blog"
+  function: "matipan-hugo-blog"
   ingressType: "nginx"
   tls:
     enabled: true
